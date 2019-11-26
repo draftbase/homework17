@@ -32,22 +32,18 @@ public enum Season {
                 '}';
     }
 
-    public static void getInfo(String userCommand) {
+    public static String[] getMonthOfSeason(String userCommand) {
         switch (userCommand) {
             case "Wiosna" :
-                System.out.println(Arrays.toString(SPRING.getMonthTab()));
-                break;
+                return SPRING.getMonthTab();
             case "Lato" :
-                System.out.println(Arrays.toString(SUMMER.getMonthTab()));
-                break;
+                return SUMMER.getMonthTab();
             case "Jesień" :
-                System.out.println(Arrays.toString(AUTUMN.getMonthTab()));
-                break;
+                return AUTUMN.getMonthTab();
             case "Zima" :
-                System.out.println(Arrays.toString(WINTER.getMonthTab()));
-                break;
+                return  WINTER.getMonthTab();
             default:
-                System.out.println("Taka pora roku nie istnieje!");
+                return null;
         }
     }
 }

@@ -1,11 +1,17 @@
 package task1;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class SeasonTest {
     public static void main(String[] args) {
         String userCommand = userCommand();
-        Season.getInfo(userCommand);
+        String[] monthOfSeason = Season.getMonthOfSeason(userCommand);
+        if(monthOfSeason != null) {
+            System.out.println(Arrays.toString(monthOfSeason));
+        } else {
+            System.out.println("Taka pora roku nie istnieje");
+        }
     }
 
     private static String userCommand() {
